@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Mines</title>
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="shortcut icon" href="#">
+  </head>
+
+
+  <body>
+    <div class="container">
+      <div class="configuration">
+        <div class="HowToPlay-container">
+          <button class="HowToPlay-button">How to Play?</button>
+        </div>
+        <div class="playerMoney">My money: <b id="MyMoney"></b></div>
+        <div class="Bet-amount">
+          <div class="cont1">
+            <div class="BetAmountText">Bet amount $</div>
+            <div class="BetAmountSelection">
+              <button class="BetMinusBtn">
+                <img
+                  class="image"
+                  id="betMinusIcon"
+                  src="image/icon-btn-minus.909c0123ad42955742b6.svg"
+                  alt="minus-button"
+                />
+              </button>
+              <input type="number" id="USDamount" />
+              <button class="BetPlusBtn">
+                <img
+                  class="image"
+                  id="betPlusIcon"
+                  src="image/icon-btn-plus.301d6c28a9a5bc77374a.svg"
+                  alt="plus-button"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="cont2">
+            <button class="cashSelect" id="oneUSD">1$</button>
+            <button class="cashSelect" id="threeUSD">3$</button>
+            <button class="cashSelect" id="fiveUSD">5$</button>
+            <button class="cashSelect" id="tenUSD">10$</button>
+          </div>
+        </div>
+        <div class="Num-mines">
+          <div class="NumOfMinesText">Number of mines(1-20)</div>
+          <div class="MineSelectionButtons">
+            <button class="mineSelect" id="oneMine">1</button>
+            <button class="mineSelect" id="threeMines">3</button>
+            <button class="mineSelect" id="fourMines">4</button>
+            <div class="MineAmountSelection">
+              <button class="MineMinusBtn">
+                <img
+                  class="image"
+                  id="minesMinusIcon"
+                  src="image/icon-btn-minus.909c0123ad42955742b6.svg"
+                  alt="minus-button"
+                />
+              </button>
+              <input type="number" id="MinesAmount" />
+              <button class="MinePlusBtn">
+                <img
+                  class="image"
+                  id="minesPlusIcon"
+                  src="image/icon-btn-plus.301d6c28a9a5bc77374a.svg"
+                  alt="plus-button"
+                />
+            </div>
+            <button class="mineSelect" id="sevenMines">7</button>
+            <button class="mineSelect" id="nineMines">9</button>
+            <button class="mineSelect" id="fifteenMines">15</button>
+          </div>
+        </div>
+        <button class="Bet-Cashout-button">BET</button>
+      </div>
+
+      <div class="actionTable">
+        <div class="Stats">
+          <span class="hidden" id="starsStats">Stars opened: <b id="StarsOpened"></b></span>
+          <div class="NextTile hidden"><span>Next tile: <b id="NextTile"></b></span></div>
+        </div>
+        <div class="Table">
+          <input type="image" id="b1" class="box" src="image/default.png">
+          <input type="image" id="b2" class="box" src="image/default.png">
+          <input type="image" id="b3" class="box" src="image/default.png">
+          <input type="image" id="b4" class="box" src="image/default.png">
+          <input type="image" id="b5" class="box" src="image/default.png">
+          <input type="image" id="b6" class="box" src="image/default.png">
+          <input type="image" id="b7" class="box" src="image/default.png">
+          <input type="image" id="b8" class="box" src="image/default.png">
+          <input type="image" id="b9" class="box" src="image/default.png">
+          <input type="image" id="b10" class="box" src="image/default.png">
+          <input type="image" id="b11" class="box" src="image/default.png">
+          <input type="image" id="b12" class="box" src="image/default.png">
+          <input type="image" id="b13" class="box" src="image/default.png">
+          <input type="image" id="b14" class="box" src="image/default.png">
+          <input type="image" id="b15" class="box" src="image/default.png">
+          <input type="image" id="b16" class="box" src="image/default.png">
+          <input type="image" id="b17" class="box" src="image/default.png">
+          <input type="image" id="b18" class="box" src="image/default.png">
+          <input type="image" id="b19" class="box" src="image/default.png">
+          <input type="image" id="b20" class="box" src="image/default.png">
+          <input type="image" id="b21" class="box" src="image/default.png">
+          <input type="image" id="b22" class="box" src="image/default.png">
+          <input type="image" id="b23" class="box" src="image/default.png">
+          <input type="image" id="b24" class="box" src="image/default.png">
+          <input type="image" id="b25" class="box" src="image/default.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <img class="HowToPlayImage" src="image/HowToPlay.png" alt="HowToPlayImage">
+      <p class="HotToPlayDescriptionText">Under each tile there is a star or land mine.</p>
+      <br><br>
+      <p class="HotToPlayDescriptionText">With each opened star your winnings increase. You can cash them out anytime,<br>after each step.</p>
+    </div>
+    <div class="overlay hidden"></div>
+    
+
+    <div class="credits"> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <script src="functionality.js"></script>
+  </body>
+</html>
